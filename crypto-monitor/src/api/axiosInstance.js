@@ -4,7 +4,7 @@ const axiosInstance = axios.create({
   baseURL: '/api', // Default baseURL for the CoinGecko API
   headers: {
     'Content-Type': 'application/json',
-    'x_cg_demo_api_key': 'CG-cJWEMMbqgbu8hzYpsXCQSq9f', // Replace with your actual API key
+    'x_cg_demo_api_key': 'yourkey', // Replace with your actual API key
   },
 });
 
