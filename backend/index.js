@@ -12,7 +12,7 @@ app.use(bodyParser.json({ limit: '200mb' }));
 app.use(bodyParser.urlencoded({ limit: '200mb', extended: true }));
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://temp:hhKW1dRnMdekiwM5@cluster0.n545xqu.mongodb.net/cryptoAlertDB')
+mongoose.connect('mongodb+srv://temp:yourpassword@cluster0.n545xqu.mongodb.net/cryptoAlertDB')
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
