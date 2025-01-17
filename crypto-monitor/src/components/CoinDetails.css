@@ -1,0 +1,95 @@
+.grid-container2{
+    display:grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: repeat(10,40px) ;
+    gap: 3px;
+    height: 100%;
+}
+
+.coin-image {
+
+    grid-row-start: 4;
+    grid-row-end: 8;
+
+
+}
+
+.coin-image img{
+    
+        height: 100%;
+        width: 100%;
+    object-fit: contain;
+
+}
+
+.chart{
+    grid-row-start: 1;
+    grid-row-end: -2;
+}
+
+.coin-name{
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+}
+
+.coin-name h1 {
+    font-size: clamp(2rem, 6vw, 5rem); /* Adjust max value for smaller grids */
+    margin: 0; /* Remove default margins */
+    text-overflow: ellipsis; /* Add '...' if text overflows horizontally */
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Prevent wrapping (optional) */
+    line-height: 1; /* Fine-tune text spacing */
+}
+
+button {
+    all: unset; /* Resets all properties to their initial state */
+    background: none; /* Removes any background */
+    border: none; /* Removes the border */
+    padding: 0; /* Removes padding */
+    font: inherit; /* Inherits the font style from the parent element */
+    color: inherit; /* Inherits text color */
+  }
+  
+.btn-alert{
+    padding: 5px 5px;
+    margin-top: 41px;
+    border: 1px solid !important;
+    border-image: linear-gradient(to bottom right, #18C8FF, #933FFE);
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+   
+}
+
+.btn-alert:hover{
+    background-image: linear-gradient(to bottom right, #18C8FF, #933FFE);
+    font-weight: 700;
+    border: 0px solid !important;
+    padding: 6px 6px;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+   
+}
+
+.coin-symbol{
+    color: rgb(181, 181, 181);
+    font-size: 25px;
+}
+
+.coin-price{
+ 
+    font-size: 1.22rem;
+    grid-column-start: 1;
+}
+
+.coin-price span{
+    font-weight: 600;
+}
+

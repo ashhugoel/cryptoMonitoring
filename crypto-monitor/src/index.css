@@ -1,0 +1,100 @@
+body {
+  
+  background-color: #0b0b0f !important;
+  padding: 2rem;
+  font-family: Inter, sans-serif!important;
+  /* overflow-x: hidden; */
+  font-family: 'Inter', 'Open Sans', sans-serif !important;
+}
+
+.gradient {
+  --size: 400px;
+  --speed: 50s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  
+  position: fixed;
+  top: -15%; /* Initial position of the first gradient */
+  left: 30%; /* Slightly off-center for design */
+  
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(rgb(6, 106, 255),#7414b4); /* Different color scheme */
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: rotate var(--speed) var(--easing) infinite;
+  z-index: -1; /* Ensures the gradient remains in the background */
+}
+
+.gradient.secondary {
+  --size: 300px; /* Smaller size for the second gradient */
+  --speed: 70s; /* Slower rotation for contrast */
+  --easing: cubic-bezier(0.7, 0.3, 0.3, 0.7); /* Slightly different easing */
+
+  top: 30%; /* Lower on the screen */
+  left:90%; /* Positioned towards the right */
+  
+  background-image: linear-gradient(#7414b4,rgb(6, 106, 255)); /* Different color scheme */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#root {
+  position: relative; /* Create stacking context for React app */
+  z-index: 1; /* Ensure React content is above the gradients */
+}
+
+
+.glass {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.6), rgba(20, 20, 20, 0.6));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.063);
+  box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.2); /* Increased blur radius to 50px */
+}
+
+.custom-link {
+  text-decoration: none !important; /* Removes the underline */
+  color: inherit !important; /* Inherits the text color from its parent */
+}
+
+.container1{
+  margin-left: 250px !important;
+  margin-right: 70px !important;
+  padding: 20px;
+  color: rgb(255, 255, 255) !important;
+ 
+}
+
+.chart-container{
+  width: 90%;
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+}
+
+.loader{
+  display: flex;
+  width: 100%;
+  height:100vh;
+  justify-content:center;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* Fully transparent background for scrollbar track */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(1, 1, 1, 0);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 1px solid rgb(86, 85, 85);  /* creates padding around scroll thumb */
+}

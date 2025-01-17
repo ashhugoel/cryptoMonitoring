@@ -1,0 +1,62 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15rem; /* equivalent to w-64 in Tailwind */
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.navbar-title{
+  height:100px;
+  font-size: 35px;
+  font-weight: 600;
+
+}
+
+.navbar-title:hover{
+  text-shadow:1px 1px 1px #fff, 1px 1px 15px #ccc;
+  transition: all 0.1s ease-in;
+}
+
+/* Navbar list items */
+.navbar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Navbar list item links */
+.navbar ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding:15px 10px;
+  font-weight: 550;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+
+
+
+.btn-grad {
+  background-image: linear-gradient(to bottom right, #1F8EBE 0%, #440495  39%, #440495 9% , #B102CD 98%);         
+   border-radius: 30px;
+   width:200px;
+
+   text-align:center;
+
+ }
+
+
+.logo-container{
+  height: 20%;
+  flex-shrink: 0;
+}
