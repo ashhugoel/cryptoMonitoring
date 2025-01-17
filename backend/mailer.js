@@ -5,15 +5,15 @@ const transporter = nodemailer.createTransport({
     service: 'gmail',
     port:465,
     auth: {
-      user: 'ritikgoel@hmritm.ac.in',
-      pass: 'pbhk qzcs zzys rvzl',
+      user: 'youremail',
+      pass: 'yourpassowrd',
     },
   });
 // Function to send an email
 const sendEmail = async (recipient, text) => {
   try {
     const mailOptions = {
-      from: 'ritikgoel@hmritm.ac.in', // Sender email
+      from: 'youremail', // Sender email
       to: recipient, // Recipient email
       subject: "Alert Triggered", // Email subject
       text: text, // Email body
